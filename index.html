@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A handcrafted birthday gift from the heart" />
+  <title>A Birthday Gift From My Heart ❤️</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+  
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Ambient Background Canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  
+  <!-- Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ========== 1. INTRO LOADER ========== -->
+  <section id="intro" class="section intro-section" aria-label="Birthday gift introduction">
+    <div class="intro-content">
+      <div class="intro-heart" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+        </svg>
+      </div>
+      <h1 class="intro-title">Someone made something just for you</h1>
+      <p class="intro-subtitle">Open your birthday surprise.</p>
+      <button id="openGiftBtn" class="btn-glass magnetic" aria-label="Open my birthday gift">
+        <span>Open My Gift</span>
+        <div class="btn-glow"></div>
+      </button>
+    </div>
+    <div class="intro-particles" aria-hidden="true"></div>
+  </section>
+
+  <!-- ========== 2. HERO ========== -->
+  <section id="hero" class="section hero-section" aria-label="Happy Birthday">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="sunflower-cluster" aria-hidden="true">
+        <div class="sunflower s1"></div>
+        <div class="sunflower s2"></div>
+        <div class="sunflower s3"></div>
+      </div>
+      <h1 class="hero-title">
+        <span class="line">Happy Birthday</span>
+        <span class="heart-emoji">❤️</span>
+      </h1>
+      <p class="hero-subtitle">To the most beautiful soul I've ever met.</p>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll to begin</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 3. LOVE LETTER INTRODUCTION ========== -->
+  <section id="intro-letter" class="section letter-section" aria-label="Introduction letter">
+    <div class="container">
+      <div class="paper-card">
+        <div class="paper-fold" aria-hidden="true"></div>
+        <h2 class="section-title handwriting">Before Anything Else...</h2>
+        <div class="letter-body">
+          <p class="reveal-text">There are moments in life when ordinary words feel too small. This is one of those moments.</p>
+          <p class="reveal-text">Today is your day — not just another date on the calendar, but a quiet celebration of everything you are and everything you continue to become.</p>
+          <p class="reveal-text">I made this for you because some feelings deserve more than a message. They deserve a place of their own.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 4. THANK YOU ========== -->
+  <section id="thank-you" class="section thank-section" aria-label="Thank you">
+    <div class="container">
+      <h2 class="section-title">Thank You</h2>
+      <div class="thank-content">
+        <p class="reveal-text large">Thank you for the way you show up every single day — with quiet strength, with kindness that never asks for applause, and with a heart that makes everything around you softer.</p>
+        <p class="reveal-text">Thank you for the late nights you work through without complaint. For the way you organize chaos into calm. For the cleanliness and care you bring into every space you touch.</p>
+        <p class="reveal-text">Thank you for being the kind of person who makes gratitude feel natural instead of forced. I am better because you exist in my life.</p>
+      </div>
+      <div class="petal-field" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ========== 5. EVERYTHING I LOVE ABOUT YOU ========== -->
+  <section id="qualities" class="section qualities-section" aria-label="Everything I love about you">
+    <div class="container">
+      <h2 class="section-title">Everything I Love About You</h2>
+      <p class="section-lead">The quiet truths that make you irreplaceable.</p>
+      <div class="qualities-grid">
+        <article class="quality-card" data-index="0">
+          <div class="card-icon">✦</div>
+          <h3>Your Hardworking Nature</h3>
+          <p>The way you pour yourself into everything you do — never for show, always with quiet excellence.</p>
+        </article>
+        <article class="quality-card" data-index="1">
+          <div class="card-icon">✦</div>
+          <h3>Your Beautiful Smile</h3>
+          <p>The kind that softens entire rooms and makes ordinary moments feel like sunlight.</p>
+        </article>
+        <article class="quality-card" data-index="2">
+          <div class="card-icon">✦</div>
+          <h3>Your Kindness</h3>
+          <p>Gentle, consistent, and never performed. It lives in the smallest gestures and the biggest sacrifices.</p>
+        </article>
+        <article class="quality-card" data-index="3">
+          <div class="card-icon">✦</div>
+          <h3>Your Caring Heart</h3>
+          <p>You notice what others miss. You remember. You protect. You hold space without being asked.</p>
+        </article>
+        <article class="quality-card" data-index="4">
+          <div class="card-icon">✦</div>
+          <h3>Your Love for Cleanliness</h3>
+          <p>The quiet order you create — a reflection of how carefully you move through the world.</p>
+        </article>
+        <article class="quality-card" data-index="5">
+          <div class="card-icon">✦</div>
+          <h3>Your Strength</h3>
+          <p>Not the loud kind. The steady kind. The kind that carries weight without needing to prove it.</p>
+        </article>
+        <article class="quality-card" data-index="6">
+          <div class="card-icon">✦</div>
+          <h3>Your Intelligence</h3>
+          <p>Sharp, thoughtful, and always curious. You see patterns and possibilities others overlook.</p>
+        </article>
+        <article class="quality-card" data-index="7">
+          <div class="card-icon">✦</div>
+          <h3>Your Laugh</h3>
+          <p>A sound that resets the atmosphere. Honest, warm, and completely unguarded.</p>
+        </article>
+        <article class="quality-card" data-index="8">
+          <div class="card-icon">✦</div>
+          <h3>Your Support</h3>
+          <p>You stand beside people in a way that makes them feel capable of more than they believed.</p>
+        </article>
+        <article class="quality-card" data-index="9">
+          <div class="card-icon">✦</div>
+          <h3>The Peace I Feel With You</h3>
+          <p>Being near you feels like exhaling after holding my breath for too long.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 6. PHOTO GALLERY ========== -->
+  <section id="gallery" class="section gallery-section" aria-label="Photo memories">
+    <div class="container">
+      <h2 class="section-title">Moments Worth Keeping</h2>
+      <p class="section-lead">A handful of frames that still feel warm.</p>
+      <div class="gallery-wrapper">
+        <div class="gallery-track" id="galleryTrack">
+          <!-- Placeholder photo cards - replace src with real photos -->
+          <div class="gallery-item">
+            <div class="gallery-frame">
+              <div class="photo-placeholder">
+                <span class="photo-icon">📷</span>
+                <span class="photo-label">Photo 1</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-frame">
+              <div class="photo-placeholder">
+                <span class="photo-icon">📷</span>
+                <span class="photo-label">Photo 2</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-frame">
+              <div class="photo-placeholder">
+                <span class="photo-icon">📷</span>
+                <span class="photo-label">Photo 3</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-frame">
+              <div class="photo-placeholder">
+                <span class="photo-icon">📷</span>
+                <span class="photo-label">Photo 4</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-frame">
+              <div class="photo-placeholder">
+                <span class="photo-icon">📷</span>
+                <span class="photo-label">Photo 5</span>
+              </div>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <div class="gallery-frame">
+              <div class="photo-placeholder">
+                <span class="photo-icon">📷</span>
+                <span class="photo-label">Photo 6</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-nav">
+          <button class="gallery-btn prev" id="galleryPrev" aria-label="Previous photo">‹</button>
+          <button class="gallery-btn next" id="galleryNext" aria-label="Next photo">›</button>
+        </div>
+      </div>
+      <p class="gallery-note">Replace the placeholders with your favorite photos together.</p>
+    </div>
+  </section>
+
+  <!-- ========== 7. MY HEART - LOVE LETTER ========== -->
+  <section id="love-letter" class="section love-letter-section" aria-label="Love letter">
+    <div class="container">
+      <h2 class="section-title handwriting">My Heart</h2>
+      <div class="letter-paper">
+        <div class="letter-content" id="loveLetterContent">
+          <p class="type-line">There is a quiet truth I carry with me every day:</p>
+          <p class="type-line">Knowing you has changed the way I see ordinary things.</p>
+          <p class="type-line">Mornings feel different. Silence feels fuller. Effort feels lighter.</p>
+          <p class="type-line">You have this rare ability to make people feel safe without ever announcing it.</p>
+          <p class="type-line">You work hard not for recognition, but because that is simply who you are.</p>
+          <p class="type-line">You keep spaces clean and hearts calmer. You organize more than rooms — you organize the chaos of living.</p>
+          <p class="type-line">And somewhere in all of that, you still find room to be kind.</p>
+          <p class="type-line">I do not take that for granted.</p>
+          <p class="type-line">On your birthday, I want you to feel the weight of how deeply you are appreciated — not just loved, but truly seen.</p>
+          <p class="type-line">For the strength you carry quietly.</p>
+          <p class="type-line">For the smile that arrives without warning.</p>
+          <p class="type-line">For the way you make peace feel possible.</p>
+          <p class="type-line signature">With all of me,</p>
+          <p class="type-line signature-name">Yours</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 8. GIFT REVEAL ========== -->
+  <section id="gift" class="section gift-section" aria-label="Birthday gift reveal">
+    <div class="container">
+      <div class="gift-curtain" aria-hidden="true">
+        <div class="curtain left"></div>
+        <div class="curtain right"></div>
+      </div>
+      <div class="gift-content">
+        <h2 class="section-title">This Is My Birthday Gift For You</h2>
+        <div class="gift-message">
+          <p class="reveal-text">I wanted to give you something that could not be wrapped in paper or left on a shelf.</p>
+          <p class="reveal-text">Something that lives in the space between us — a small digital world built only for you, filled with the things I admire most about the person you are.</p>
+          <p class="reveal-text">This website is my way of saying: you are worth the time, the care, and the quiet effort it took to make something beautiful in your name.</p>
+          <p class="reveal-text highlight">Happy Birthday. You deserve every soft and golden thing this life can offer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 9. MY PROMISE ========== -->
+  <section id="promise" class="section promise-section" aria-label="My promise">
+    <div class="container">
+      <h2 class="section-title">My Promise</h2>
+      <div class="promise-content">
+        <div class="promise-sunflower" aria-hidden="true"></div>
+        <p class="reveal-text large">I promise to keep noticing the quiet ways you make life better.</p>
+        <p class="reveal-text">I promise to protect the peace you create and to never take your kindness for granted.</p>
+        <p class="reveal-text">I promise to stand beside your hard work, to celebrate your strength, and to remain grateful for the simple fact that you exist.</p>
+        <p class="reveal-text">And on every birthday that follows, I will find new ways to remind you of how deeply you are valued.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 10. FINAL SCENE ========== -->
+  <section id="final" class="section final-section" aria-label="Final birthday wish">
+    <div class="final-sky" aria-hidden="true">
+      <div class="stars" id="stars"></div>
+      <div class="fireflies" id="fireflies"></div>
+    </div>
+    <div class="sunflower-field" aria-hidden="true">
+      <div class="field-sunflower f1"></div>
+      <div class="field-sunflower f2"></div>
+      <div class="field-sunflower f3"></div>
+      <div class="field-sunflower f4"></div>
+      <div class="field-sunflower f5"></div>
+    </div>
+    <div class="final-content">
+      <h1 class="final-title">Happy Birthday, My Love</h1>
+      <p class="final-subtitle">May this year bring you the same quiet beauty you give to everyone around you.</p>
+      <p class="final-wish">You are cherished. You are celebrated. You are enough — exactly as you are.</p>
+      <div class="final-heart" aria-hidden="true">❤️</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Made with quiet intention • Just for you</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
