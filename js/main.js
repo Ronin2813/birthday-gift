@@ -130,8 +130,29 @@
       .to('#openGiftBtn', { opacity: 1, y: 0, scale: 1, duration: 0.9 }, '-=0.4');
 
     btn.addEventListener('click', () => {
-      // Magnetic ripple effect
-      gsap.to(btn, { scale: 0.95, duration: 0.15, yoyo: true, repeat: 1 });
+
+    // Start background music
+    const bgMusic = document.getElementById('bgMusic');
+
+    if (bgMusic) {
+        bgMusic.volume = 0.5;
+
+        bgMusic.play()
+            .then(() => {
+                console.log('Music started successfully');
+            })
+            .catch((error) => {
+                console.error('Music failed to play:', error);
+            });
+    }
+
+    // Magnetic ripple effect
+    gsap.to(btn, { 
+        scale: 0.95, 
+        duration: 0.15, 
+        yoyo: true, 
+        repeat: 1 
+    });
 
       gsap.to(intro, {
         opacity: 0,

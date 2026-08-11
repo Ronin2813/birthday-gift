@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A handcrafted birthday gift from the heart" />
-  <title>A Birthday Gift From My Heart ❤️</title>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
-  
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
-  
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A handcrafted birthday gift from the heart" />
+    <title>A Birthday Gift For The Love Of My Life ❤️</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
   <!-- Ambient Background Canvas -->
+  <audio id="bgMusic" loop>
+    <source src="./assets/Perfect_piano.mp3" type="audio/mpeg">
+</audio>
   <canvas id="particles-canvas" aria-hidden="true"></canvas>
   
   <!-- Progress Bar -->
@@ -155,7 +158,7 @@
   <!-- ========== 6. PHOTO GALLERY ========== -->
   <section id="gallery" class="section gallery-section" aria-label="Photo memories">
     <div class="container">
-      <h2 class="section-title">Moments Worth Keeping</h2>
+      <h2 class="section-title">Some of my favourite Pictures of you</h2>
       <p class="section-lead">A handful of frames that still feel warm.</p>
       <div class="gallery-wrapper">
         <div class="gallery-track" id="galleryTrack">
@@ -163,7 +166,7 @@
           <div class="gallery-item">
             <div class="gallery-frame">
               <div class="photo-placeholder">
-                <span class="photo-icon">📷</span>
+                <span class="photo-icon"><img src="assets/pic1.jpeg" alt=""></span>
                 <span class="photo-label">Photo 1</span>
               </div>
             </div>
@@ -171,7 +174,7 @@
           <div class="gallery-item">
             <div class="gallery-frame">
               <div class="photo-placeholder">
-                <span class="photo-icon">📷</span>
+                <span class="photo-icon"><img src="assets/pic2.jpeg" alt=""></span>
                 <span class="photo-label">Photo 2</span>
               </div>
             </div>
@@ -179,7 +182,7 @@
           <div class="gallery-item">
             <div class="gallery-frame">
               <div class="photo-placeholder">
-                <span class="photo-icon">📷</span>
+                <span class="photo-icon"><img src="assets/pic3.jpeg" alt=""></span>
                 <span class="photo-label">Photo 3</span>
               </div>
             </div>
@@ -187,7 +190,7 @@
           <div class="gallery-item">
             <div class="gallery-frame">
               <div class="photo-placeholder">
-                <span class="photo-icon">📷</span>
+                <span class="photo-icon"><img src="assets/pic4.jpeg" alt=""></span>
                 <span class="photo-label">Photo 4</span>
               </div>
             </div>
@@ -195,7 +198,7 @@
           <div class="gallery-item">
             <div class="gallery-frame">
               <div class="photo-placeholder">
-                <span class="photo-icon">📷</span>
+                <span class="photo-icon"><img src="assets/pic5.png" alt=""></span>
                 <span class="photo-label">Photo 5</span>
               </div>
             </div>
@@ -203,7 +206,7 @@
           <div class="gallery-item">
             <div class="gallery-frame">
               <div class="photo-placeholder">
-                <span class="photo-icon">📷</span>
+                <span class="photo-icon"><img src="assets/pic6.png" alt=""></span>
                 <span class="photo-label">Photo 6</span>
               </div>
             </div>
@@ -224,20 +227,20 @@
       <h2 class="section-title handwriting">My Heart</h2>
       <div class="letter-paper">
         <div class="letter-content" id="loveLetterContent">
-          <p class="type-line">There is a quiet truth I carry with me every day:</p>
-          <p class="type-line">Knowing you has changed the way I see ordinary things.</p>
-          <p class="type-line">Mornings feel different. Silence feels fuller. Effort feels lighter.</p>
-          <p class="type-line">You have this rare ability to make people feel safe without ever announcing it.</p>
-          <p class="type-line">You work hard not for recognition, but because that is simply who you are.</p>
-          <p class="type-line">You keep spaces clean and hearts calmer. You organize more than rooms — you organize the chaos of living.</p>
-          <p class="type-line">And somewhere in all of that, you still find room to be kind.</p>
-          <p class="type-line">I do not take that for granted.</p>
-          <p class="type-line">On your birthday, I want you to feel the weight of how deeply you are appreciated — not just loved, but truly seen.</p>
-          <p class="type-line">For the strength you carry quietly.</p>
-          <p class="type-line">For the smile that arrives without warning.</p>
-          <p class="type-line">For the way you make peace feel possible.</p>
-          <p class="type-line signature">With all of me,</p>
-          <p class="type-line signature-name">Yours</p>
+          <p class="type-line">My life</p>
+          <p class="type-line">I dont know where to start</p>
+          <p class="type-line">You have brought so much joy into my life</p>
+          <p class="type-line">I cant ever explain</p>
+          <p class="type-line">Your love gave me the will to live when i was at my lowest</p>
+          <p class="type-line">You are the reason i could grow so much</p>
+          <p class="type-line">You are the reason i understood the meaning of love</p>
+          <p class="type-line">You taught me to actually take care of myself</p>
+          <p class="type-line">You gave me everything i have until now</p>
+          <p class="type-line">I am soo grateful that i was able to meet you</p>
+          <p class="type-line">I would like to spend every moment i have in this life </p>
+          <p class="type-line">with you</p>
+          <p class="type-line signature">With all my love,</p>
+          <p class="type-line signature-name">Vaageesh</p>
         </div>
       </div>
     </div>
@@ -285,13 +288,20 @@
     <div class="sunflower-field" aria-hidden="true">
       <div class="field-sunflower f1"></div>
       <div class="field-sunflower f2"></div>
+      <div class="field-sunflower f5"></div>
       <div class="field-sunflower f3"></div>
       <div class="field-sunflower f4"></div>
+      <div class="field-sunflower f1"></div>
+      <div class="field-sunflower f1"></div>
+      <div class="field-sunflower f3"></div>
       <div class="field-sunflower f5"></div>
+      <div class="field-sunflower f5"></div>
+      <div class="field-sunflower f2"></div>
+
     </div>
     <div class="final-content">
-      <h1 class="final-title">Happy Birthday, My Love</h1>
-      <p class="final-subtitle">May this year bring you the same quiet beauty you give to everyone around you.</p>
+      <h1 class="final-title">Happy Birthday, Mera Bacha❤️</h1>
+      <p class="final-subtitle">May this year bring you the same quiet Strength you give to everyone around you.</p>
       <p class="final-wish">You are cherished. You are celebrated. You are enough — exactly as you are.</p>
       <div class="final-heart" aria-hidden="true">❤️</div>
     </div>
@@ -301,7 +311,6 @@
   <footer class="site-footer">
     <p>Made with quiet intention • Just for you</p>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>
